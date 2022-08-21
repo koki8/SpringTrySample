@@ -28,18 +28,18 @@
         booktable
     </select>
 
-    <select id="insert">
+    <select id="insertBook">
         INSERT INTO booktable(
         id,
         book_name,
-        volume_name,
+        volume_num,
         author_name,
         published_date
         )
         VALUES (
         #{id},
         #{bookName},
-        #{volumeName},
+        #{volumeNum},
         #{authorName},
         #{publishedDate}
         )

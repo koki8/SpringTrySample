@@ -6,8 +6,11 @@ import com.example.MybatisTrySample.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -17,8 +20,14 @@ public class BookController {
     @Autowired
     BookService bookService;
 
+    @ModelAttribute
+    public BookForm setUpForm(){
+        BookForm bookForm = new BookForm();
+        return bookForm;
+    }
+
     @RequestMapping("/search")
-    public String index(BookForm bookForm, String showList, Model model){
+    public String index(BookForm bookForm, String showList,  Model model){
 
         model.addAttribute("title", "本屋さん");
 
@@ -33,5 +42,18 @@ public class BookController {
         }
 
         return "index";
+    }
+
+    @PostMapping("/insert")
+    public String insert(BookForm bookForm, Model model){
+
+        Book book = new Book(5, "どすこいおむすびくん", 3, "おむすび伯爵", LocalDate.now());
+//        book.setBookName(bookForm.getBookName());
+//        book.setVolumeNum(bookForm.getVolumeNum());
+//        book.setAuthorName(bookForm.getAuthorName());
+//        book.setPublishedDate(bookForm.getPublishedDate());
+        bookService.insertBook(book);
+
+        return "redirect:/book/search";
     }
 }

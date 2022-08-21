@@ -26,4 +26,8 @@ public class BookService {
     public List<Book> getBookList(){
         return bookDao.findAll();
     }
+
+    public void insertBook(Book book){
+        bookDao.insertBook(book);
+    }
 }

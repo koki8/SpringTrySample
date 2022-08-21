@@ -11,5 +11,7 @@ public interface BookDao {
 
     List<Book> findAll();
 
+    void insertBook(Book book);
+
 
 }
