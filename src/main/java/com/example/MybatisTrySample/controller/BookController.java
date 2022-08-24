@@ -22,8 +22,7 @@ public class BookController {
 
     @ModelAttribute
     public BookForm setUpForm(){
-        BookForm bookForm = new BookForm();
-        return bookForm;
+        return new BookForm();
     }
 
     @RequestMapping("/search")
@@ -47,11 +46,11 @@ public class BookController {
     @PostMapping("/insert")
     public String insert(BookForm bookForm, Model model){
 
-        Book book = new Book(5, "どすこいおむすびくん", 3, "おむすび伯爵", LocalDate.now());
-//        book.setBookName(bookForm.getBookName());
-//        book.setVolumeNum(bookForm.getVolumeNum());
-//        book.setAuthorName(bookForm.getAuthorName());
-//        book.setPublishedDate(bookForm.getPublishedDate());
+        Book book = new Book();
+        book.setBookName(bookForm.getBookName());
+        book.setVolumeNum(bookForm.getVolumeNum());
+        book.setAuthorName(bookForm.getAuthorName());
+        book.setPublishedDate(bookForm.getPublishedDate());
         bookService.insertBook(book);
 
         return "redirect:/book/search";
