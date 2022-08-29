@@ -81,6 +81,13 @@ public class BookController {
         return "redirect:/book/search";
     }
 
+    @PostMapping("/delete")
+    public String deleteBook(BookForm bookForm, Model model){
+
+        bookService.deleteBook(bookForm.getId());
+        return "redirect:/book/search";
+    }
+
 
 /** 以下部品作成　**/
     //更新用のModel作成

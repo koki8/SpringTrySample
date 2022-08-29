@@ -13,7 +13,6 @@ import java.util.Optional;
 @Transactional
 public class BookService {
 
-
     private final BookDao bookDao;
 
     BookService(BookDao bookdao){
@@ -35,4 +34,9 @@ public class BookService {
     }
 
     public boolean updateBook(Book book) { return  bookDao.updateBook(book);}
+
+    public boolean deleteBook(Integer id){
+        Book book = new Book();
+        book.setId(id);
+        return bookDao.deleteBook(book);}
 }

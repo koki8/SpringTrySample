@@ -47,6 +47,7 @@
                     <th>著者名</th>
                     <th>刊行日</th>
                     <th>編集</th>
+                    <th>削除</th>
                 </tr>
                 <tr th:each="book:${bookList}" th:object="${book}">
                     <td th:text="*{id}">id</td>
@@ -59,13 +60,19 @@
                             <input type="submit" value="編集">
                         </form>
                     </td>
+                    <td>
+                        <form th:action="@{/book/delete}" method="POST">
+                            <input type="hidden" name="id" th:value="${book.id}">
+                            <input type="submit" value="削除">
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>
     </div>
 
     <div class="book_form mt-4 pb-4">
-        <h2 th:text="${formTitle}"></h2>
+        <h2 th:text="${formTitle}" class="mt-4"></h2>
 
         <form th:action="${bookForm.newBook}? @{/book/insert} : @{/book/update}" method="POST" th:object="${bookForm}">
             <div>

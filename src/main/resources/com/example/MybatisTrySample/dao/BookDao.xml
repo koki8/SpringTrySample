@@ -56,4 +56,10 @@
         WHERE
           id = #{id}
     </update>
+
+    <delete id="deleteBook">
+        DELETE FROM booktable
+        WHERE
+          id = #{id}
+    </delete>
 </mapper>

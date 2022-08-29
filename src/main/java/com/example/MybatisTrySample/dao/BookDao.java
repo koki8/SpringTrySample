@@ -20,4 +20,7 @@ public interface BookDao {
     //本の更新
     boolean updateBook(Book book);
 
+    //本の削除
+    boolean deleteBook(Book book);
+
 }
