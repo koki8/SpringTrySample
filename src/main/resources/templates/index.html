@@ -10,56 +10,64 @@
 </head>
 <body class="ml-4">
     <p>本屋さん</p>
-    <form action="/book/search" method="post" class="mt-4 pb-4">
-        <label>ID:<input class="input" type="text" name="id"></label><br>
-        <div><input class="search" type="submit" value="検索"/></div>
-    </form>
-    <form action="/book/search" method="post">
-        <div><input class="list" type="submit" name="showList" value="一覧表示"/></div>
-    </form>
+    <div th:if="${bookForm.newBook}">
+        <form action="/book/search" method="post" class="mt-4 pb-4">
+            <label>ID:<input class="input" type="text" name="id"></label><br>
+            <div><input class="search" type="submit" value="検索"/></div>
+        </form>
+        <form action="/book/search" method="post">
+            <div><input class="list" type="submit" name="showList" value="一覧表示"/></div>
+        </form>
 
-    <div th:if="${book} !=null" th:object="${book}">
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>書籍名</th>
-                <th>巻</th>
-                <th>著者名</th>
-                <th>刊行日</th>
-            </tr>
-            <tr>
-                <td th:text="*{id}">id</td>
-                <td th:text="*{bookName}">書籍名</td>
-                <td th:text="*{volumeNum}">巻</td>
-                <td th:text="*{authorName}">著者名</td>
-                <td th:text="*{publishedDate}">刊行日</td>
-            </tr>
-        </table>
-    </div>
+        <div th:if="${book} !=null" th:object="${book}">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>書籍名</th>
+                    <th>巻</th>
+                    <th>著者名</th>
+                    <th>刊行日</th>
+                </tr>
+                <tr>
+                    <td th:text="*{id}">id</td>
+                    <td th:text="*{bookName}">書籍名</td>
+                    <td th:text="*{volumeNum}">巻</td>
+                    <td th:text="*{authorName}">著者名</td>
+                    <td th:text="*{publishedDate}">刊行日</td>
+                </tr>
+            </table>
+        </div>
 
-    <div th:if="${bookList} !=null">
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>書籍名</th>
-                <th>巻</th>
-                <th>著者名</th>
-                <th>刊行日</th>
-            </tr>
-            <tr th:each="book:${bookList}" th:object="${book}">
-                <td th:text="*{id}">id</td>
-                <td th:text="*{bookName}">書籍名</td>
-                <td th:text="*{volumeNum}">巻</td>
-                <td th:text="*{authorName}">著者名</td>
-                <td th:text="*{publishedDate}">刊行日</td>
-            </tr>
-        </table>
+        <div th:if="${bookList} !=null">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>書籍名</th>
+                    <th>巻</th>
+                    <th>著者名</th>
+                    <th>刊行日</th>
+                    <th>編集</th>
+                </tr>
+                <tr th:each="book:${bookList}" th:object="${book}">
+                    <td th:text="*{id}">id</td>
+                    <td th:text="*{bookName}">書籍名</td>
+                    <td th:text="*{volumeNum}">巻</td>
+                    <td th:text="*{authorName}">著者名</td>
+                    <td th:text="*{publishedDate}">刊行日</td>
+                    <td>
+                        <form th:action="@{/book/{id}(id=*{id})}" method="GET">
+                            <input type="submit" value="編集">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div class="book_form mt-4 pb-4">
-        <h2>書籍の登録</h2>
+        <h2 th:text="${formTitle}"></h2>
 
-        <form action="/book/insert" method="POST" th:object="${bookForm}">
+        <form th:action="${bookForm.newBook}? @{/book/insert} : @{/book/update}" method="POST" th:object="${bookForm}">
             <div>
                 <input type="hidden" th:if="${id}" th:field="*{id}">
             </div>
@@ -83,6 +91,9 @@
                 <button type="submit" name="bookinserted" class="btn btn-primary">登録</button>
             </div>
         </form>
+        <div th:unless="${bookForm.newBook}">
+            <a href="#" th:href="@{/book/search}">登録画面に戻る</a>
+        </div>
     </div>
 </body>
 </html>

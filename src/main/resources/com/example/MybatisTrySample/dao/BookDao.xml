@@ -16,6 +16,7 @@
         WHERE
         id = #{id}
     </select>
+
 <!--    すべてのidを抽出-->
     <select id="findAll" resultType="com.example.MybatisTrySample.entity.Book">
         SELECT
@@ -44,4 +45,15 @@
         #{publishedDate}
         )
     </select>
+
+    <update id="updateBook" parameterType="com.example.MybatisTrySample.entity.Book">
+        UPDATE booktable SET
+          id = #{id},
+          book_name = #{bookName},
+          volume_num = #{volumeNum},
+          author_name = #{authorName},
+          published_date = #{publishedDate}
+        WHERE
+          id = #{id}
+    </update>
 </mapper>
