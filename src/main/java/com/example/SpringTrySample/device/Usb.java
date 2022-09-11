@@ -1,4 +1,4 @@
-package com.example.MybatisTrySample.device;
+package com.example.SpringTrySample.device;
 
 public interface Usb {
 

@@ -1,14 +1,13 @@
-package com.example.MybatisTrySample.controller;
+package com.example.SpringTrySample.controller;
 
-import com.example.MybatisTrySample.entity.Book;
-import com.example.MybatisTrySample.form.BookForm;
-import com.example.MybatisTrySample.service.BookService;
+import com.example.SpringTrySample.entity.Book;
+import com.example.SpringTrySample.form.BookForm;
+import com.example.SpringTrySample.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 

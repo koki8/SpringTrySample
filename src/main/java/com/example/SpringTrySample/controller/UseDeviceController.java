@@ -1,6 +1,6 @@
-package com.example.MybatisTrySample.controller;
+package com.example.SpringTrySample.controller;
 
-import com.example.MybatisTrySample.device.Usb;
+import com.example.SpringTrySample.device.Usb;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

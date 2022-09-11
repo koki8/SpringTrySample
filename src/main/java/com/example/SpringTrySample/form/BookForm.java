@@ -1,4 +1,4 @@
-package com.example.MybatisTrySample.form;
+package com.example.SpringTrySample.form;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

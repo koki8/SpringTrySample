@@ -1,8 +1,7 @@
-package com.example.MybatisTrySample.service;
+package com.example.SpringTrySample.service;
 
-import com.example.MybatisTrySample.dao.BookDao;
-import com.example.MybatisTrySample.entity.Book;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.SpringTrySample.dao.BookDao;
+import com.example.SpringTrySample.entity.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

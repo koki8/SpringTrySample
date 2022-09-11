@@ -1,4 +1,4 @@
-package com.example.MybatisTrySample.interceptor;
+package com.example.SpringTrySample.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,6 @@
-package com.example.MybatisTrySample.dao;
+package com.example.SpringTrySample.dao;
 
-import com.example.MybatisTrySample.entity.Book;
+import com.example.SpringTrySample.entity.Book;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

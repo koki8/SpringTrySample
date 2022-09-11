@@ -1,8 +1,7 @@
-package com.example.MybatisTrySample.config;
+package com.example.SpringTrySample.config;
 
-import com.example.MybatisTrySample.device.Keyboard;
-import com.example.MybatisTrySample.device.Mouse;
-import com.example.MybatisTrySample.device.Usb;
+import com.example.SpringTrySample.device.Keyboard;
+import com.example.SpringTrySample.device.Usb;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

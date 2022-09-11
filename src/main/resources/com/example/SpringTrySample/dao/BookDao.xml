@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.MybatisTrySample.dao.BookDao">
+<mapper namespace="com.example.SpringTrySample.dao.BookDao">
 <!--    id検索-->
-    <select id="findById" resultType="com.example.MybatisTrySample.entity.Book">
+    <select id="findById" resultType="com.example.SpringTrySample.entity.Book">
         SELECT
         id,
         book_name,
@@ -18,7 +18,7 @@
     </select>
 
 <!--    すべてのidを抽出-->
-    <select id="findAll" resultType="com.example.MybatisTrySample.entity.Book">
+    <select id="findAll" resultType="com.example.SpringTrySample.entity.Book">
         SELECT
         id,
         book_name,
@@ -46,7 +46,7 @@
         )
     </select>
 
-    <update id="updateBook" parameterType="com.example.MybatisTrySample.entity.Book">
+    <update id="updateBook" parameterType="com.example.SpringTrySample.entity.Book">
         UPDATE booktable SET
           id = #{id},
           book_name = #{bookName},

@@ -1,4 +1,4 @@
-package com.example.MybatisTrySample.controller;
+package com.example.SpringTrySample.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
