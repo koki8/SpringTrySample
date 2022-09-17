@@ -16,7 +16,7 @@ public class ResponseFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        res.addHeader("Json情報", String.valueOf(new JsonSampleData("2", "tuika", "taro")));
+        res.addHeader("jsonInfo", String.valueOf(new JsonSampleData("2", "tuika", "taro")));
         System.out.println("headerにJson情報を追加しました");
         chain.doFilter(req,res);
     }
