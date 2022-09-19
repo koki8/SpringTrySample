@@ -1,14 +1,34 @@
-version: '3'
+version: '3.4'
+
+x-template: &flyway-template
+  image: flyway/flyway:latest
+  volumes:
+    - ./db/sql:/flyway/sql # マイグレーション用SQLファイルの格納先
+    - ./db/conf:/flyway/conf # 設定ファイルの格納先
+  depends_on:
+    - db
 
 services:
+  flyway-clean:
+    <<: *flyway-template
+    command: clean
+
+  flyway-migrate:
+    <<: *flyway-template
+    command: migrate
+
+  flyway-info:
+    <<: *flyway-template
+    command: info
+
   db:
-    image: postgres:14
-    container_name: postgres
+    image: postgres:latest
+    container_name: postgresdb
     ports:
       - "5432:5432"
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./script:/docker-entrypoint-initdb.d
+      - ./db/init:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_PASSWORD=password
 volumes:
