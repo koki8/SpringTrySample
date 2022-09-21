@@ -2,6 +2,9 @@ package com.example.SpringTrySample.service;
 
 import com.example.SpringTrySample.dao.BookDao;
 import com.example.SpringTrySample.entity.Book;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +21,8 @@ public class BookService {
         this.bookDao = bookdao;
     }
 
+    Logger logger = LoggerFactory.getLogger(BookService.class);
+
     public Optional<Book> findById(Integer id){
         Book book = new Book();
         book.setId(id); //検索用のDTOに入力値から受け取ったidをセットしている
@@ -25,11 +30,17 @@ public class BookService {
     }
 
     public List<Book> getBookList(){
+        logger.info("本のリストを抽出します");
         return bookDao.findAll();
     }
 
     public void insertBook(Book book){
-        bookDao.insertBook(book);
+       try{
+           bookDao.insertBook(book);
+       } catch (DuplicateKeyException e){
+           logger.error("一意制約違反です。");
+       }
+
     }
 
     public boolean updateBook(Book book) { return  bookDao.updateBook(book);}

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,8 +16,11 @@ import java.util.Optional;
 @RequestMapping("/book")
 public class BookController {
 
-    @Autowired
-    BookService bookService;
+    private final BookService bookService;
+
+    public BookController(BookService bookService){
+        this.bookService = bookService;
+    }
 
     @ModelAttribute
     public BookForm setUpForm(){
@@ -52,7 +56,8 @@ public class BookController {
     @PostMapping("/insert")
     public String insert(BookForm bookForm, Model model){
 
-        Book book = makeBook(bookForm);
+//        Book book = makeBook(bookForm);
+        Book book = new Book(1, "羅生門",1, "芥川龍之介", LocalDate.now());
         bookService.insertBook(book);
 
         return "redirect:/book/search";

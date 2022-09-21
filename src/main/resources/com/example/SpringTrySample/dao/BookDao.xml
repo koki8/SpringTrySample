@@ -12,7 +12,7 @@
         author_name,
         published_date
         FROM
-        booktable
+        ${dbschema}.booktable
         WHERE
         id = #{id}
     </select>
@@ -26,11 +26,12 @@
         author_name,
         published_date
         FROM
-        booktable
+        ${dbschema}.booktable
     </select>
 
-    <select id="insertBook">
-        INSERT INTO booktable(
+<!--    <insert id="insertBook" useGeneratedKeys="true" keyProperty="id">-->
+    <insert id="insertBook">
+        INSERT INTO ${dbschema}.booktable(
         id,
         book_name,
         volume_num,
@@ -44,10 +45,10 @@
         #{authorName},
         #{publishedDate}
         )
-    </select>
+    </insert>
 
     <update id="updateBook" parameterType="com.example.SpringTrySample.entity.Book">
-        UPDATE booktable SET
+        UPDATE ${dbschema}.booktable SET
           id = #{id},
           book_name = #{bookName},
           volume_num = #{volumeNum},
@@ -58,7 +59,7 @@
     </update>
 
     <delete id="deleteBook">
-        DELETE FROM booktable
+        DELETE FROM ${dbschema}.booktable
         WHERE
           id = #{id}
     </delete>
