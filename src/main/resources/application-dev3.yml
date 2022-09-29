@@ -1,0 +1,3 @@
+#外部設定値の優先度確認
+variable:
+  parameter: application-dev3.ymlで上書き
