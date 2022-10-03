@@ -39,7 +39,9 @@ public class BookService {
            bookDao.insertBook(book);
        } catch (DuplicateKeyException e){
            logger.error("一意制約違反です。");
+           throw e;
        }
+
 
     }
 
