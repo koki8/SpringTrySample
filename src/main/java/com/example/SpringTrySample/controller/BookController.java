@@ -56,8 +56,7 @@ public class BookController {
     @PostMapping("/insert")
     public String insert(BookForm bookForm, Model model){
 
-//        Book book = makeBook(bookForm);
-        Book book = new Book(1, "羅生門",1, "芥川龍之介", LocalDate.now());
+        Book book = makeBook(bookForm);
         bookService.insertBook(book);
 
         return "redirect:/book/search";

@@ -29,17 +29,14 @@
         ${dbschema}.booktable
     </select>
 
-<!--    <insert id="insertBook" useGeneratedKeys="true" keyProperty="id">-->
-    <insert id="insertBook">
+    <insert id="insertBook" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO ${dbschema}.booktable(
-        id,
         book_name,
         volume_num,
         author_name,
         published_date
         )
         VALUES (
-        #{id},
         #{bookName},
         #{volumeNum},
         #{authorName},
