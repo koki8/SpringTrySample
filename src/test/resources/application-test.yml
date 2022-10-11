@@ -1,0 +1,27 @@
+# postgres DB接続設定
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/library
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: never
+
+#外部設定値の優先度確認
+variable:
+  parameter: application-common.ymlで上書き
+
+
+#mybatis設定
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  configuration-properties:
+    dbschema: libraryschema
+
+#ログ設定
+logging:
+  level:
+    web: trace
+  file:
+    path: ./logs # ログファイル出力先設定
