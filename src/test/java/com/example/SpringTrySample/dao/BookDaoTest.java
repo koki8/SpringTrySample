@@ -108,8 +108,16 @@ class BookDaoTest {
         @Test
         @DisplayName("insertBook_書籍情報の追加成功")
         public void insertBookSuccess() {
-            Book book = new Book(3, "HUNTER X HUNTER",36,"冨樫義博",LocalDate.parse("2018-10-04"));
-            bookDao.insertBook(book);
+            Book setBook = new Book();
+            setBook.setId(3);
+            setBook.setBookName("HUNTER X HUNTER");
+            setBook.setVolumeNum(36);
+            setBook.setAuthorName("冨樫義博");
+            setBook.setPublishedDate(LocalDate.parse("2018-10-04"));
+            bookDao.insertBook(setBook);
+
+
+            List<Book> actualBookList = bookDao.findAll();
 
             Book checkBook = new Book();
             checkBook.setId(3);
