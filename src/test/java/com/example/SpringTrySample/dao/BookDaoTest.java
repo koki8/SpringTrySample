@@ -82,13 +82,13 @@ public class BookDaoTest {
 
         @Test
         @DisplayName("findById_書籍情報の取得失敗")
-        public void findByIdNotFailure() {
+        public void findByIdFailure() {
             Book checkBook = new Book();
             checkBook.setId(5);
 
-            assertThatThrownBy(() -> {
-                Optional<Book> actualBookOpt = bookDao.findById(checkBook);
-            }).isInstanceOf(NullPointerException.class);
+            Optional<Book> actualBookOpt = bookDao.findById(checkBook);
+
+            assertThat(actualBookOpt).isEmpty();
         }
 
     }
