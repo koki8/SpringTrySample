@@ -40,8 +40,8 @@ public class BookDaoTest {
 
     Destination dest;
 
-    private final Operation RESET_DATA = Operations.deleteAllFrom("libraryschema.booktable");
-    private final Operation INSERT_BOOKTABLE = Operations.insertInto("libraryschema.booktable")
+    private final Operation RESET_DATA = Operations.deleteAllFrom("booktable");
+    private final Operation INSERT_BOOKTABLE = Operations.insertInto("booktable")
             .columns("id","book_name","volume_num", "author_name", "published_date")
             .values(1, "HUNTER X HUNTER",36,"冨樫義博","2018-10-04")
             .values(2, "ベルセルク",40,"三浦健太郎","2018-09-28")
@@ -114,7 +114,7 @@ public class BookDaoTest {
         @Test
         @DisplayName("insertBook_書籍情報の追加成功")
         public void insertBookSuccess() {
-            final Table table = new Table(dataSource, "libraryschema.booktable");
+            final Table table = new Table(dataSource, "booktable");
             Changes changes = new Changes(table);
 
             changes.setStartPointNow();
@@ -129,7 +129,7 @@ public class BookDaoTest {
             changes.setEndPointNow();
             org.assertj.db.api.Assertions.assertThat(changes)
                     .hasNumberOfChanges(1)   //1レコード変更された確認　ここでどうしても失敗する。なぜか変更箇所が0
-                    .ofModificationOnTable("libraryschema.booktable");
+                    .ofModificationOnTable("booktable");
 
         }
 

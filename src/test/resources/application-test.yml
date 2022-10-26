@@ -16,8 +16,8 @@ variable:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-  configuration-properties:
-    dbschema: libraryschema
+#  configuration-properties:
+#    dbschema: libraryschema
 
 #ログ設定
 logging:

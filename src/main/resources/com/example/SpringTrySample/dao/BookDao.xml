@@ -6,46 +6,50 @@
 <!--    id検索-->
     <select id="findById" resultType="com.example.SpringTrySample.entity.Book">
         SELECT
-        id,
-        book_name,
-        volume_num,
-        author_name,
-        published_date
-        FROM
-        ${dbschema}.booktable
-        WHERE
-        id = #{id}
+            id,
+            book_name,
+            volume_num,
+            author_name,
+            published_date
+            FROM
+    <!--        ${dbschema}.booktable-->
+            booktable
+            WHERE
+            id = #{id}
     </select>
 
 <!--    すべてのidを抽出-->
     <select id="findAll" resultType="com.example.SpringTrySample.entity.Book">
         SELECT
-        id,
-        book_name,
-        volume_num,
-        author_name,
-        published_date
-        FROM
-        ${dbschema}.booktable
+            id,
+            book_name,
+            volume_num,
+            author_name,
+            published_date
+            FROM
+            booktable
+<!--        ${dbschema}.booktable-->
     </select>
 
     <insert id="insertBook" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO ${dbschema}.booktable(
-        book_name,
-        volume_num,
-        author_name,
-        published_date
-        )
-        VALUES (
-        #{bookName},
-        #{volumeNum},
-        #{authorName},
-        #{publishedDate}
+<!--        INSERT INTO ${dbschema}.booktable(-->
+        INSERT INTO booktable(
+            book_name,
+            volume_num,
+            author_name,
+            published_date
+            )
+            VALUES (
+            #{bookName},
+            #{volumeNum},
+            #{authorName},
+            #{publishedDate}
         )
     </insert>
 
     <update id="updateBook" parameterType="com.example.SpringTrySample.entity.Book">
-        UPDATE ${dbschema}.booktable SET
+<!--        UPDATE ${dbschema}.booktable SET-->
+        UPDATE booktable SET
           id = #{id},
           book_name = #{bookName},
           volume_num = #{volumeNum},
@@ -56,7 +60,8 @@
     </update>
 
     <delete id="deleteBook">
-        DELETE FROM ${dbschema}.booktable
+<!--        DELETE FROM ${dbschema}.booktable-->
+        DELETE FROM booktable
         WHERE
           id = #{id}
     </delete>
