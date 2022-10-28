@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 @SpringBootTest  // @SpringBootConfigurationがついたクラスが自動検出される
 @ActiveProfiles("test")  // application-test.ymlの内容が読み込まれる
 @Rollback  // @Transactionalがあればいらない。。？
-@Transactional //　トランザクション管理される
+//@Transactional //　トランザクション管理される
 public class BookDaoTest {
 
     @Autowired
