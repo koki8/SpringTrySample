@@ -1,92 +1,22 @@
-2022-09-29 22:46:42.220  INFO 11763 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11763 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 22:46:42.236  INFO 11763 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 2 profiles are active: "common", "p1"
-2022-09-29 22:46:42.324  INFO 11763 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 22:46:43.969  INFO 11763 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 22:46:43.983  INFO 11763 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 22:46:43.983  INFO 11763 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 22:46:44.055  INFO 11763 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 22:46:44.055  INFO 11763 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1729 ms
-2022-09-29 22:46:44.762  INFO 11763 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 22:46:45.020  INFO 11763 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 22:46:45.069  INFO 11763 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 22:46:45.087  INFO 11763 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 3.964 seconds (JVM running for 5.255)
-2022-09-29 22:53:17.306  INFO 11763 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-29 22:53:17.309  INFO 11763 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-29 22:53:17.317  INFO 11763 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2022-09-29 22:53:17.898  INFO 11763 --- [http-nio-8080-exec-3] .e.S.f.ParameterChangeConfirmationFilter : p1.ymlで上書き
-2022-09-29 22:53:18.050  INFO 11763 --- [http-nio-8080-exec-4] .e.S.f.ParameterChangeConfirmationFilter : p1.ymlで上書き
-2022-09-29 22:53:38.540  INFO 11808 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11808 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 22:53:38.542  INFO 11808 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 1 profile is active: "common"
-2022-09-29 22:53:38.600  INFO 11808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 22:53:39.938  INFO 11808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 22:53:39.950  INFO 11808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 22:53:39.951  INFO 11808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 22:53:40.024  INFO 11808 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 22:53:40.024  INFO 11808 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1423 ms
-2022-09-29 22:53:40.604  INFO 11808 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 22:53:40.789  INFO 11808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 22:53:40.858  INFO 11808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 22:53:40.868  INFO 11808 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 3.17 seconds (JVM running for 3.92)
-2022-09-29 22:53:46.487  INFO 11808 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-29 22:53:46.488  INFO 11808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-29 22:53:46.491  INFO 11808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-09-29 22:54:29.107  INFO 11825 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11825 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 22:54:29.109  INFO 11825 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 1 profile is active: "common"
-2022-09-29 22:54:29.167  INFO 11825 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 22:54:30.450  INFO 11825 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 22:54:30.463  INFO 11825 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 22:54:30.463  INFO 11825 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 22:54:30.526  INFO 11825 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 22:54:30.526  INFO 11825 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
-2022-09-29 22:54:31.106  INFO 11825 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 22:54:31.281  INFO 11825 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 22:54:31.349  INFO 11825 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 22:54:31.362  INFO 11825 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 2.998 seconds (JVM running for 3.688)
-2022-09-29 23:00:17.550  INFO 11902 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11902 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 23:00:17.552  INFO 11902 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 1 profile is active: "common"
-2022-09-29 23:00:17.613  INFO 11902 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 23:00:18.993  INFO 11902 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 23:00:19.006  INFO 11902 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 23:00:19.007  INFO 11902 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 23:00:19.072  INFO 11902 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 23:00:19.072  INFO 11902 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1458 ms
-2022-09-29 23:00:19.667  INFO 11902 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 23:00:19.846  INFO 11902 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 23:00:19.899  INFO 11902 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 23:00:19.916  INFO 11902 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 3.273 seconds (JVM running for 3.959)
-2022-09-29 23:00:28.225  INFO 11902 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-29 23:00:28.226  INFO 11902 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-29 23:00:28.228  INFO 11902 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-29 23:00:28.736  INFO 11902 --- [http-nio-8080-exec-1] .e.S.f.ParameterChangeConfirmationFilter : application-common.ymlで上書き
-2022-09-29 23:00:28.890  INFO 11902 --- [http-nio-8080-exec-2] .e.S.f.ParameterChangeConfirmationFilter : application-common.ymlで上書き
-2022-09-29 23:04:34.750  INFO 11923 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11923 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 23:04:34.752  INFO 11923 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 2 profiles are active: "common", "dev3"
-2022-09-29 23:04:34.828  INFO 11923 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 23:04:36.307  INFO 11923 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 23:04:36.323  INFO 11923 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 23:04:36.323  INFO 11923 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 23:04:36.405  INFO 11923 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 23:04:36.405  INFO 11923 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1577 ms
-2022-09-29 23:04:37.059  INFO 11923 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 23:04:37.246  INFO 11923 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 23:04:37.304  INFO 11923 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 23:04:37.315  INFO 11923 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 3.396 seconds (JVM running for 4.347)
-2022-09-29 23:04:51.163  INFO 11923 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-29 23:04:51.164  INFO 11923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-29 23:04:51.166  INFO 11923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-09-29 23:04:51.844  INFO 11923 --- [http-nio-8080-exec-1] .e.S.f.ParameterChangeConfirmationFilter : application-dev3.ymlで上書き
-2022-09-29 23:05:16.387  INFO 11935 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 11.0.15 on nishidakoukinoMacBook-Pro.local with PID 11935 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
-2022-09-29 23:05:16.388  INFO 11935 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 2 profiles are active: "common", "dev3"
-2022-09-29 23:05:16.462  INFO 11935 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-29 23:05:17.844  INFO 11935 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-09-29 23:05:17.858  INFO 11935 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-29 23:05:17.858  INFO 11935 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-29 23:05:17.927  INFO 11935 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-29 23:05:17.927  INFO 11935 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1464 ms
-2022-09-29 23:05:18.515  INFO 11935 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-29 23:05:18.698  INFO 11935 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-29 23:05:18.755  INFO 11935 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-09-29 23:05:18.766  INFO 11935 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 3.248 seconds (JVM running for 3.943)
-2022-09-29 23:05:27.912  INFO 11935 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-29 23:05:27.913  INFO 11935 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-29 23:05:27.916  INFO 11935 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-11 00:08:54.764  INFO 65362 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-11 00:08:54.795  INFO 65362 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-11 00:08:59.071  INFO 66189 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Starting SpringTrySampleApplication using Java 16.0.1 on nishidakoukinoMacBook-Pro.local with PID 66189 (/Users/koki/学習関連/Java/SpringTrySample/target/classes started by koki in /Users/koki/学習関連/Java/SpringTrySample)
+2022-11-11 00:08:59.072  INFO 66189 --- [restartedMain] c.e.S.SpringTrySampleApplication         : The following 2 profiles are active: "common", "dev3"
+2022-11-11 00:08:59.174  INFO 66189 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-11 00:09:01.794  INFO 66189 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-11 00:09:01.807  INFO 66189 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-11 00:09:01.807  INFO 66189 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-11 00:09:01.886  INFO 66189 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-11 00:09:01.887  INFO 66189 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2710 ms
+2022-11-11 00:09:02.501  INFO 66189 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-11 00:09:02.639  INFO 66189 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-11 00:09:02.680  INFO 66189 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-11 00:09:02.693  INFO 66189 --- [restartedMain] c.e.S.SpringTrySampleApplication         : Started SpringTrySampleApplication in 4.618 seconds (JVM running for 5.339)
+2022-11-11 00:09:07.868  INFO 66189 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-11 00:09:07.868  INFO 66189 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-11 00:09:07.870  INFO 66189 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-11 00:09:07.913  INFO 66189 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-11 00:09:08.059  INFO 66189 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-11 00:09:08.067  INFO 66189 --- [http-nio-8080-exec-1] c.e.SpringTrySample.service.BookService  : 本のリストを抽出します
+2022-11-11 00:43:39.666  INFO 66189 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-11 00:43:39.687  INFO 66189 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

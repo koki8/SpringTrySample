@@ -6,6 +6,8 @@ import com.example.SpringTrySample.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -54,7 +56,14 @@ public class BookController {
     }
 
     @PostMapping("/insert")
-    public String insert(BookForm bookForm, Model model){
+    public String insert(@Validated BookForm bookForm, BindingResult bindingResult, Model model){
+
+        //入力チェックされた場合
+        if(bindingResult.hasErrors()){
+
+            //入力画面へ
+            return "index";
+        }
 
         Book book = makeBook(bookForm);
         bookService.insertBook(book);
