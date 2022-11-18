@@ -21,6 +21,11 @@ services:
     <<: *flyway-template
     command: info
 
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - 9000:9000
+
   db:
     image: postgres:latest
     container_name: postgresdb
