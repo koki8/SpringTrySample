@@ -22,7 +22,8 @@ services:
     command: info
 
   sonarqube:
-    image: sonarqube:lts
+    image: sonarqube:9.7.0-community
+    platform: linux/amd64
     ports:
       - 9000:9000
 
