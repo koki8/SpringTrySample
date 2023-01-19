@@ -27,8 +27,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         //　認可の設定
         http.authorizeHttpRequests() //ルール、アクセスポリシーの設定
-                .antMatchers("/login").permitAll() //loginは認証なしでaccessできる
+                .antMatchers("/login","/signup").permitAll() //ログイン画面、ユーザー登録画面は認証なしでaccessできる
+                .antMatchers("/admin").hasAuthority("ROLE_ADMIN") //adminはadminユーザーしか表示できない なぜかhasRoleだとうまくいかなかった
+                .antMatchers("/user").hasAnyAuthority("ROLE_ADMIN","ROLE_USER") //roleはadmin,userどちらでも表示できる
                 .anyRequest().authenticated();//　↑以外の全てのURLリクエストはloginしないと見れない
+
+
+        //認可失敗時の設定
+        http.exceptionHandling()
+                        .accessDeniedPage("/accessDeny"); //アクセス拒否されたときに表示するパス
 
         //ログイン設定
         http.formLogin() //フォーム認証の有効化
@@ -45,8 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
         //　AuthenticationManagerBuilderに、実装したUserDetailsServiceを設定
-        auth
-                .userDetailsService(userDetailsService) //userDetailsServiceを使って、認証を行う
+        auth.userDetailsService(userDetailsService) //userDetailsServiceを使って、認証を行う
                 .passwordEncoder(passwordEncoder()); //パスワードのハッシュ化方法を指定（BCryptアルゴリズム）
     }
 }

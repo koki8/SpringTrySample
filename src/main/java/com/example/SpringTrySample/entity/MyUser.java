@@ -10,10 +10,15 @@ import java.util.Collection;
 public class MyUser implements UserDetails {
 
     private String username;
-
     private String password;
-
     private Collection<GrantedAuthority> authorities;
+
+    public MyUser(String username, String password, Collection<GrantedAuthority> authorities){
+        this.username = username;
+        this.password = password;
+        this.authorities = authorities;
+    }
+
 
     public Collection<? extends GrantedAuthority> getAuthorites(){
         return authorities;

@@ -2,13 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Login Success</title>
+    <title>Login Failure</title>
 </head>
 <body>
-    <h1>ログイン成功</h1>
-    <h2><span th:text="${username}"></span>さんHello!!!</h2>
-    <h2><span th:text="${authorities}"></span>の権限</h2>
-    
+    <h1>アクセス拒否</h1>
+    <h2><span th:text="${username}"></span>さん　表示できません</h2>
 
     <div>
         <a th:href="@{/signup}">ユーザー登録</a>
