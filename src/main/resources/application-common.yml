@@ -16,6 +16,13 @@ spring:
     driver-class-name: org.postgresql.Driver
     initialization-mode: never
 
+# session設定
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
+
 #外部設定値の優先度確認
 variable:
   parameter: application-common.ymlで上書き

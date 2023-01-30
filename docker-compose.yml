@@ -21,11 +21,11 @@ services:
     <<: *flyway-template
     command: info
 
-  sonarqube:
-    image: sonarqube:9.7.0-community
-    platform: linux/amd64
-    ports:
-      - 9000:9000
+#  sonarqube:
+#    image: sonarqube:9.7.0-community
+#    platform: linux/amd64
+#    ports:
+#      - 9000:9000
 
   jenkins:
     container_name: jenkins
@@ -34,6 +34,13 @@ services:
       - 8090:8080
     volumes:
       - ./jenkins_home:/var/jenkins_home
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./data/redis:/data"
 
   db:
     image: postgres:latest
